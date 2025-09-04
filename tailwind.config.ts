@@ -61,6 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				ml: {
+					yellow: 'hsl(var(--ml-yellow))',
+					'yellow-dark': 'hsl(var(--ml-yellow-dark))',
+					blue: 'hsl(var(--ml-blue))',
+					'blue-dark': 'hsl(var(--ml-blue-dark))',
+					'blue-light': 'hsl(var(--ml-blue-light))',
+					'gray-100': 'hsl(var(--ml-gray-100))',
+					'gray-200': 'hsl(var(--ml-gray-200))',
+					'gray-300': 'hsl(var(--ml-gray-300))',
+					'gray-400': 'hsl(var(--ml-gray-400))',
+					'gray-500': 'hsl(var(--ml-gray-500))',
+					'gray-600': 'hsl(var(--ml-gray-600))',
+					'gray-700': 'hsl(var(--ml-gray-700))',
+					success: 'hsl(var(--ml-success))',
+					warning: 'hsl(var(--ml-warning))',
+					danger: 'hsl(var(--ml-danger))'
 				}
 			},
 			borderRadius: {
@@ -84,11 +101,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				shimmer: {
+					'0%': { left: '-100%' },
+					'100%': { left: '100%' }
+				},
+				rotate: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				scratchShimmer: {
+					'0%': { backgroundPosition: '0% 0, 0 0, 0 0' },
+					'100%': { backgroundPosition: '300% 0, 0 0, 0 0' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0) rotate(0)', opacity: '0.1' },
+					'50%': { transform: 'translateY(-30px) rotate(180deg)', opacity: '0.05' }
+				},
+				sparkle: {
+					'0%, 100%': { transform: 'scale(0) rotate(0)', opacity: '0' },
+					'50%': { transform: 'scale(1) rotate(180deg)', opacity: '1' }
+				},
+				fadeInUp: {
+					'from': { opacity: '0', transform: 'translateY(20px)' },
+					'to': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				shimmer: 'shimmer 3s infinite',
+				rotate: 'rotate 20s linear infinite',
+				scratchShimmer: 'scratchShimmer 3.5s linear infinite',
+				float: 'float 12s ease-in-out infinite',
+				sparkle: 'sparkle 2s ease-in-out infinite',
+				fadeInUp: 'fadeInUp 0.8s ease-out'
 			}
 		}
 	},
